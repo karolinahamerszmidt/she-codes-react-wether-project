@@ -110,7 +110,10 @@ export default function Search() {
                 </span>
               </div>
               <div>
-                <img src={`http://openweathermap.org/img/wn/${icon}@2x.png`} />
+                <img
+                  src={`http://openweathermap.org/img/wn/${icon}@2x.png`}
+                  alt="weather icon"
+                />
               </div>
             </div>
             <div className="col-6">
