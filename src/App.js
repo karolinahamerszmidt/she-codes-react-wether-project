@@ -24,7 +24,14 @@ export default function App() {
         >
           open sourced on Github
         </a>{" "}
-        and hosted on Netlify
+        and hosted on{" "}
+        <a
+          href="https://incomparable-malasada-06c552.netlify.app/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Netlify
+        </a>
       </div>
     </div>
   );
