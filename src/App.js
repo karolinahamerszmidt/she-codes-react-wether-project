@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
 
-function App() {
+import Search from "./Search";
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <h1>Weather Search Engine</h1>
+      <Search />
+      <div className="footer">
+        This website was coded by{" "}
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/karolinahamerszmidt"
+          rel="noreferrer"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          Learn React
-        </a>
-      </header>
+          Karolina Hamerszmidt
+        </a>{" "}
+        and is{" "}
+        <a
+          href="https://github.com/karolinahamerszmidt/she-codes-react-wether-project"
+          rel="noreferrer"
+          target="_blank"
+        >
+          open sourced on Github
+        </a>{" "}
+        and hosted on Netlify
+      </div>
     </div>
   );
 }
-
-export default App;
