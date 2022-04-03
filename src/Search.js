@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import WeatherForecast from "./WeatherForecast.js";
 import axios from "axios";
 
 export default function Search() {
@@ -11,9 +12,10 @@ export default function Search() {
   const [icon, setIcon] = useState(null);
   const [date, setDate] = useState(null);
   const [isShowingFahrenheit, setIsShowingFahrenheit] = useState(false);
+  const [lat, setLat] = useState(null);
+  const [lon, setLon] = useState(null);
 
   function updateData(response) {
-    console.log(response);
     console.log(response);
     setTemperature(response.data.main.temp);
     setDescription(response.data.weather[0].description);
@@ -21,6 +23,8 @@ export default function Search() {
     setWind(response.data.wind.speed);
     setIcon(response.data.weather[0].icon);
     setCityName(response.data.name);
+    setLat(response.data.coord.lat);
+    setLon(response.data.coord.lon);
 
     let now = new Date();
     let hours = now.getHours();
@@ -116,14 +120,15 @@ export default function Search() {
                 />
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-6 mt-4">
               <div>Description: {description}</div>
-              <div>Humidity: {humidity}</div>
-              <div>Wind: {wind}</div>
+              <div>Humidity: {humidity}%</div>
+              <div>Wind: {wind}km/h</div>
             </div>
           </div>
         ) : null}
       </div>
+      <WeatherForecast lat={lat} lon={lon} />
     </div>
   );
 }

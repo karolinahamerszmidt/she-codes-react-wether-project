@@ -37,3 +37,13 @@ h1 {
   margin-top: 15px;
   font-size: 12px;
 }
+
+.WeatherForecast {
+  text-align: center;
+  font-size: 12px;
+}
+
+.WeatherForecast-temperature-min {
+  opacity: 0.6;
+  margin-left: 5px;
+}
